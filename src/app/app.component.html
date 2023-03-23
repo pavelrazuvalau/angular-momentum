@@ -1,8 +1,7 @@
-<div class="content-wrapper">
-  <app-user-input (submitUser)="submitUserName($event)"></app-user-input>
+<app-header></app-header>
 
-  <div *ngIf="userNameSubmitted">
-    <app-greeting [currentName]="currentName"></app-greeting>
-    <app-todo-list></app-todo-list>
-  </div>
+<div class="content-wrapper">
+  <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>
